@@ -1,0 +1,177 @@
+case_id,shipment_id,issue_type,record_id,expected_decision,rule
+GT-000001-EXC,SHP-2026-000001,physical_range,EXC-2026-000001,invalid_sensor_data,Duration 10 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000002-GAP,SHP-2026-000002,missing_interval,RDG-SNS-CNT-000002-TEMP-2026-01-07T09:40:00Z,flag_data_gap_not_safe,A missing 5-minute interval is a data-quality exception.
+GT-000002-GAP,SHP-2026-000002,missing_interval,RDG-SNS-CNT-000002-TEMP-2026-01-07T09:45:00Z,flag_data_gap_not_safe,A missing 5-minute interval is a data-quality exception.
+GT-000003-TIME,SHP-2026-000003,delivered_before_departure,SHP-2026-000003,flag_invalid_lifecycle,delivered_at must not precede departure_at.
+GT-000004-POLICY,SHP-2026-000004,wrong_product_threshold,RDG-SNS-CNT-000004-TEMP-2026-01-19T09:40:00Z,use_policy_for_shipment_product,Resolve effective threshold policy through shipment.product_id.
+GT-000005-EXC,SHP-2026-000005,undercounted_duration,EXC-2026-000002,brief,Duration 10 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000006-EXC,SHP-2026-000006,physical_range,EXC-2026-000003,invalid_sensor_data,Duration 10 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000007-GAP,SHP-2026-000007,missing_interval,RDG-SNS-CNT-000007-TEMP-2026-02-06T09:40:00Z,flag_data_gap_not_safe,A missing 5-minute interval is a data-quality exception.
+GT-000007-GAP,SHP-2026-000007,missing_interval,RDG-SNS-CNT-000007-TEMP-2026-02-06T09:45:00Z,flag_data_gap_not_safe,A missing 5-minute interval is a data-quality exception.
+GT-000007-EXC,SHP-2026-000007,missing_interval,EXC-2026-000004,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000008-TIME,SHP-2026-000008,delivered_before_departure,SHP-2026-000008,flag_invalid_lifecycle,delivered_at must not precede departure_at.
+GT-000009-POLICY,SHP-2026-000009,wrong_product_threshold,RDG-SNS-CNT-000009-TEMP-2026-02-18T09:40:00Z,use_policy_for_shipment_product,Resolve effective threshold policy through shipment.product_id.
+GT-000010-EXC,SHP-2026-000010,undercounted_duration,EXC-2026-000005,brief,Duration 10 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000011-CAL,SHP-2026-000011,calibration_failure,RDG-SNS-CNT-000011-TEMP-2026-03-02T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000014-EXC,SHP-2026-000014,injected_excursion,EXC-2026-000006,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000021-EXC,SHP-2026-000021,injected_excursion,EXC-2026-000007,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000028-EXC,SHP-2026-000028,injected_excursion,EXC-2026-000008,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000035-EXC,SHP-2026-000035,injected_excursion,EXC-2026-000009,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000042-EXC,SHP-2026-000042,injected_excursion,EXC-2026-000010,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000047-CAL,SHP-2026-000047,calibration_failure,RDG-SNS-CNT-000047-TEMP-2026-10-04T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000049-EXC,SHP-2026-000049,injected_excursion,EXC-2026-000011,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000056-EXC,SHP-2026-000056,injected_excursion,EXC-2026-000012,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000063-EXC,SHP-2026-000063,injected_excursion,EXC-2026-000013,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000070-EXC,SHP-2026-000070,injected_excursion,EXC-2026-000014,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000077-EXC,SHP-2026-000077,injected_excursion,EXC-2026-000015,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000084-EXC,SHP-2026-000084,injected_excursion,EXC-2026-000016,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000091-EXC,SHP-2026-000091,injected_excursion,EXC-2026-000017,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000094-CAL,SHP-2026-000094,calibration_failure,RDG-SNS-CNT-000094-TEMP-2027-07-13T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000098-EXC,SHP-2026-000098,injected_excursion,EXC-2026-000018,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000105-EXC,SHP-2026-000105,injected_excursion,EXC-2026-000019,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000112-EXC,SHP-2026-000112,injected_excursion,EXC-2026-000020,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000119-EXC,SHP-2026-000119,injected_excursion,EXC-2026-000021,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000126-EXC,SHP-2026-000126,injected_excursion,EXC-2026-000022,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000133-EXC,SHP-2026-000133,injected_excursion,EXC-2026-000023,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000140-EXC,SHP-2026-000140,injected_excursion,EXC-2026-000024,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000141-CAL,SHP-2026-000141,calibration_failure,RDG-SNS-CNT-000141-TEMP-2028-04-20T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000147-EXC,SHP-2026-000147,injected_excursion,EXC-2026-000025,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000154-EXC,SHP-2026-000154,injected_excursion,EXC-2026-000026,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000161-EXC,SHP-2026-000161,injected_excursion,EXC-2026-000027,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000168-EXC,SHP-2026-000168,injected_excursion,EXC-2026-000028,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000175-EXC,SHP-2026-000175,injected_excursion,EXC-2026-000029,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000182-EXC,SHP-2026-000182,injected_excursion,EXC-2026-000030,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000188-CAL,SHP-2026-000188,calibration_failure,RDG-SNS-CNT-000188-TEMP-2029-01-27T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000189-EXC,SHP-2026-000189,injected_excursion,EXC-2026-000031,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000196-EXC,SHP-2026-000196,injected_excursion,EXC-2026-000032,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000203-EXC,SHP-2026-000203,injected_excursion,EXC-2026-000033,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000210-EXC,SHP-2026-000210,injected_excursion,EXC-2026-000034,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000217-EXC,SHP-2026-000217,injected_excursion,EXC-2026-000035,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000224-EXC,SHP-2026-000224,injected_excursion,EXC-2026-000036,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000231-EXC,SHP-2026-000231,injected_excursion,EXC-2026-000037,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000235-CAL,SHP-2026-000235,calibration_failure,RDG-SNS-CNT-000235-TEMP-2029-11-05T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000238-EXC,SHP-2026-000238,injected_excursion,EXC-2026-000038,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000245-EXC,SHP-2026-000245,injected_excursion,EXC-2026-000039,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000252-EXC,SHP-2026-000252,injected_excursion,EXC-2026-000040,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000259-EXC,SHP-2026-000259,injected_excursion,EXC-2026-000041,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000266-EXC,SHP-2026-000266,injected_excursion,EXC-2026-000042,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000273-EXC,SHP-2026-000273,injected_excursion,EXC-2026-000043,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000280-EXC,SHP-2026-000280,injected_excursion,EXC-2026-000044,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000282-CAL,SHP-2026-000282,calibration_failure,RDG-SNS-CNT-000282-TEMP-2030-08-14T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000287-EXC,SHP-2026-000287,injected_excursion,EXC-2026-000045,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000294-EXC,SHP-2026-000294,injected_excursion,EXC-2026-000046,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000301-EXC,SHP-2026-000301,injected_excursion,EXC-2026-000047,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000308-EXC,SHP-2026-000308,injected_excursion,EXC-2026-000048,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000315-EXC,SHP-2026-000315,injected_excursion,EXC-2026-000049,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000322-EXC,SHP-2026-000322,injected_excursion,EXC-2026-000050,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000329-CAL,SHP-2026-000329,calibration_failure,RDG-SNS-CNT-000029-TEMP-2031-05-23T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000329-EXC,SHP-2026-000329,calibration_failure,EXC-2026-000051,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000336-EXC,SHP-2026-000336,injected_excursion,EXC-2026-000052,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000343-EXC,SHP-2026-000343,injected_excursion,EXC-2026-000053,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000350-EXC,SHP-2026-000350,injected_excursion,EXC-2026-000054,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000357-EXC,SHP-2026-000357,injected_excursion,EXC-2026-000055,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000364-EXC,SHP-2026-000364,injected_excursion,EXC-2026-000056,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000371-EXC,SHP-2026-000371,injected_excursion,EXC-2026-000057,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000376-CAL,SHP-2026-000376,calibration_failure,RDG-SNS-CNT-000076-TEMP-2032-02-29T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000378-EXC,SHP-2026-000378,injected_excursion,EXC-2026-000058,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000385-EXC,SHP-2026-000385,injected_excursion,EXC-2026-000059,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000392-EXC,SHP-2026-000392,injected_excursion,EXC-2026-000060,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000399-EXC,SHP-2026-000399,injected_excursion,EXC-2026-000061,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000406-EXC,SHP-2026-000406,injected_excursion,EXC-2026-000062,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000413-EXC,SHP-2026-000413,injected_excursion,EXC-2026-000063,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000420-EXC,SHP-2026-000420,injected_excursion,EXC-2026-000064,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000423-CAL,SHP-2026-000423,calibration_failure,RDG-SNS-CNT-000123-TEMP-2032-12-07T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000427-EXC,SHP-2026-000427,injected_excursion,EXC-2026-000065,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000434-EXC,SHP-2026-000434,injected_excursion,EXC-2026-000066,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000441-EXC,SHP-2026-000441,injected_excursion,EXC-2026-000067,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000448-EXC,SHP-2026-000448,injected_excursion,EXC-2026-000068,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000455-EXC,SHP-2026-000455,injected_excursion,EXC-2026-000069,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000462-EXC,SHP-2026-000462,injected_excursion,EXC-2026-000070,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000469-EXC,SHP-2026-000469,injected_excursion,EXC-2026-000071,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000470-CAL,SHP-2026-000470,calibration_failure,RDG-SNS-CNT-000170-TEMP-2033-09-15T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000476-EXC,SHP-2026-000476,injected_excursion,EXC-2026-000072,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000483-EXC,SHP-2026-000483,injected_excursion,EXC-2026-000073,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000490-EXC,SHP-2026-000490,injected_excursion,EXC-2026-000074,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000497-EXC,SHP-2026-000497,injected_excursion,EXC-2026-000075,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000504-EXC,SHP-2026-000504,injected_excursion,EXC-2026-000076,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000511-EXC,SHP-2026-000511,injected_excursion,EXC-2026-000077,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000517-CAL,SHP-2026-000517,calibration_failure,RDG-SNS-CNT-000217-TEMP-2034-06-24T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000518-EXC,SHP-2026-000518,injected_excursion,EXC-2026-000078,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000525-EXC,SHP-2026-000525,injected_excursion,EXC-2026-000079,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000532-EXC,SHP-2026-000532,injected_excursion,EXC-2026-000080,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000539-EXC,SHP-2026-000539,injected_excursion,EXC-2026-000081,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000546-EXC,SHP-2026-000546,injected_excursion,EXC-2026-000082,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000553-EXC,SHP-2026-000553,injected_excursion,EXC-2026-000083,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000560-EXC,SHP-2026-000560,injected_excursion,EXC-2026-000084,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000564-CAL,SHP-2026-000564,calibration_failure,RDG-SNS-CNT-000264-TEMP-2035-04-02T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000567-EXC,SHP-2026-000567,injected_excursion,EXC-2026-000085,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000574-EXC,SHP-2026-000574,injected_excursion,EXC-2026-000086,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000581-EXC,SHP-2026-000581,injected_excursion,EXC-2026-000087,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000588-EXC,SHP-2026-000588,injected_excursion,EXC-2026-000088,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000595-EXC,SHP-2026-000595,injected_excursion,EXC-2026-000089,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000602-EXC,SHP-2026-000602,injected_excursion,EXC-2026-000090,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000609-EXC,SHP-2026-000609,injected_excursion,EXC-2026-000091,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000611-CAL,SHP-2026-000611,calibration_failure,RDG-SNS-CNT-000011-TEMP-2036-01-09T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000616-EXC,SHP-2026-000616,injected_excursion,EXC-2026-000092,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000623-EXC,SHP-2026-000623,injected_excursion,EXC-2026-000093,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000630-EXC,SHP-2026-000630,injected_excursion,EXC-2026-000094,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000637-EXC,SHP-2026-000637,injected_excursion,EXC-2026-000095,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000644-EXC,SHP-2026-000644,injected_excursion,EXC-2026-000096,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000651-EXC,SHP-2026-000651,injected_excursion,EXC-2026-000097,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000658-CAL,SHP-2026-000658,calibration_failure,RDG-SNS-CNT-000058-TEMP-2036-10-17T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000658-EXC,SHP-2026-000658,calibration_failure,EXC-2026-000098,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000665-EXC,SHP-2026-000665,injected_excursion,EXC-2026-000099,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000672-EXC,SHP-2026-000672,injected_excursion,EXC-2026-000100,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000679-EXC,SHP-2026-000679,injected_excursion,EXC-2026-000101,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000686-EXC,SHP-2026-000686,injected_excursion,EXC-2026-000102,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000693-EXC,SHP-2026-000693,injected_excursion,EXC-2026-000103,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000700-EXC,SHP-2026-000700,injected_excursion,EXC-2026-000104,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000705-CAL,SHP-2026-000705,calibration_failure,RDG-SNS-CNT-000105-TEMP-2037-07-26T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000707-EXC,SHP-2026-000707,injected_excursion,EXC-2026-000105,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000714-EXC,SHP-2026-000714,injected_excursion,EXC-2026-000106,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000721-EXC,SHP-2026-000721,injected_excursion,EXC-2026-000107,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000728-EXC,SHP-2026-000728,injected_excursion,EXC-2026-000108,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000735-EXC,SHP-2026-000735,injected_excursion,EXC-2026-000109,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000742-EXC,SHP-2026-000742,injected_excursion,EXC-2026-000110,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000749-EXC,SHP-2026-000749,injected_excursion,EXC-2026-000111,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000752-CAL,SHP-2026-000752,calibration_failure,RDG-SNS-CNT-000152-TEMP-2038-05-04T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000756-EXC,SHP-2026-000756,injected_excursion,EXC-2026-000112,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000763-EXC,SHP-2026-000763,injected_excursion,EXC-2026-000113,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000770-EXC,SHP-2026-000770,injected_excursion,EXC-2026-000114,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000777-EXC,SHP-2026-000777,injected_excursion,EXC-2026-000115,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000784-EXC,SHP-2026-000784,injected_excursion,EXC-2026-000116,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000791-EXC,SHP-2026-000791,injected_excursion,EXC-2026-000117,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000798-EXC,SHP-2026-000798,injected_excursion,EXC-2026-000118,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000799-CAL,SHP-2026-000799,calibration_failure,RDG-SNS-CNT-000199-TEMP-2039-02-10T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000805-EXC,SHP-2026-000805,injected_excursion,EXC-2026-000119,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000812-EXC,SHP-2026-000812,injected_excursion,EXC-2026-000120,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000819-EXC,SHP-2026-000819,injected_excursion,EXC-2026-000121,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000826-EXC,SHP-2026-000826,injected_excursion,EXC-2026-000122,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000833-EXC,SHP-2026-000833,injected_excursion,EXC-2026-000123,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000840-EXC,SHP-2026-000840,injected_excursion,EXC-2026-000124,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000846-CAL,SHP-2026-000846,calibration_failure,RDG-SNS-CNT-000246-TEMP-2039-11-19T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000847-EXC,SHP-2026-000847,injected_excursion,EXC-2026-000125,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000854-EXC,SHP-2026-000854,injected_excursion,EXC-2026-000126,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000861-EXC,SHP-2026-000861,injected_excursion,EXC-2026-000127,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000868-EXC,SHP-2026-000868,injected_excursion,EXC-2026-000128,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000875-EXC,SHP-2026-000875,injected_excursion,EXC-2026-000129,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000882-EXC,SHP-2026-000882,injected_excursion,EXC-2026-000130,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000889-EXC,SHP-2026-000889,injected_excursion,EXC-2026-000131,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000893-CAL,SHP-2026-000893,calibration_failure,RDG-SNS-CNT-000293-TEMP-2040-08-27T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000896-EXC,SHP-2026-000896,injected_excursion,EXC-2026-000132,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000903-EXC,SHP-2026-000903,injected_excursion,EXC-2026-000133,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000910-EXC,SHP-2026-000910,injected_excursion,EXC-2026-000134,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000917-EXC,SHP-2026-000917,injected_excursion,EXC-2026-000135,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000924-EXC,SHP-2026-000924,injected_excursion,EXC-2026-000136,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000931-EXC,SHP-2026-000931,injected_excursion,EXC-2026-000137,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000938-EXC,SHP-2026-000938,injected_excursion,EXC-2026-000138,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000940-CAL,SHP-2026-000940,calibration_failure,RDG-SNS-CNT-000040-TEMP-2041-06-05T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000945-EXC,SHP-2026-000945,injected_excursion,EXC-2026-000139,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000952-EXC,SHP-2026-000952,injected_excursion,EXC-2026-000140,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000959-EXC,SHP-2026-000959,injected_excursion,EXC-2026-000141,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000966-EXC,SHP-2026-000966,injected_excursion,EXC-2026-000142,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000973-EXC,SHP-2026-000973,injected_excursion,EXC-2026-000143,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.
+GT-000980-EXC,SHP-2026-000980,injected_excursion,EXC-2026-000144,brief,Duration 30 minutes compared with product limit 30 minutes; policy POL-0002-V1.
+GT-000987-CAL,SHP-2026-000987,calibration_failure,RDG-SNS-CNT-000087-TEMP-2042-03-14T09:40:00Z,flag_sensor_calibration_failure,Sensor calibration failure must be flagged as a data-quality exception.
+GT-000987-EXC,SHP-2026-000987,calibration_failure,EXC-2026-000145,prolonged,Duration 30 minutes compared with product limit 20 minutes; policy POL-0003-V1.
+GT-000994-EXC,SHP-2026-000994,injected_excursion,EXC-2026-000146,prolonged,Duration 30 minutes compared with product limit 15 minutes; policy POL-0001-V1.

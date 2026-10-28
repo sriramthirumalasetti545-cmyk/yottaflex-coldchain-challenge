@@ -1,0 +1,62 @@
+{
+  "coldchain.sqlite": {
+    "sha256": "3fd5ee5b65c5a4b9ad5401c07320ec5f74d6a201ce673db54d116b993214780c",
+    "bytes": 402853888
+  },
+  "Container.csv": {
+    "sha256": "a207eb98112c148addc72e5aec023d983b9fb6b5d40595e362404d3354a02e5d",
+    "bytes": 10236
+  },
+  "CorrectiveAction.csv": {
+    "sha256": "52dd8850bf81e67c4b9960b477e89cf21ad2067144d382c70d61ceed9cbcc545",
+    "bytes": 17455
+  },
+  "CustodyEvent.csv": {
+    "sha256": "6eaab2bf8917cd3ab779f7b5d93e90dbd724cbaa7bcb394b16d3315baa9e9565",
+    "bytes": 379489
+  },
+  "data_dictionary.json": {
+    "sha256": "67f558d5088d5a5d1d1dd4adfba1d50bc5db6f74c7d221de22324f042b54325d",
+    "bytes": 4790
+  },
+  "Excursion.csv": {
+    "sha256": "734f7e66d5bb73c18a82520dddbc1af2594d1286bc1993ffe981f949dd2972ea",
+    "bytes": 21571
+  },
+  "ground_truth.csv": {
+    "sha256": "42398cc786e4e5183c52306821faa6f7592621b52527da18734316651ee724a6",
+    "bytes": 28438
+  },
+  "Product.csv": {
+    "sha256": "2ce0e59fb6d67dace2987db5b9edeb50e9b8699f8de223087741a0f25e8292f7",
+    "bytes": 245
+  },
+  "RouteStop.csv": {
+    "sha256": "283c7deefe0e40664a8ecc6079d4e4cca76307f4ec5b1c9896f4ad829b0e4be3",
+    "bytes": 444069
+  },
+  "Sensor.csv": {
+    "sha256": "f24f3c8f3c12e6476621d1761c2794ebdee99da9fffdc04242a91b94088f70da",
+    "bytes": 53489
+  },
+  "SensorReading.csv": {
+    "sha256": "d5f253a8014fc33681ae1e7fb7ef1b4c5b27e3e9b3f68aa475b7c30b8fe6febf",
+    "bytes": 265801087
+  },
+  "Shipment.csv": {
+    "sha256": "4e2a2de5b2bb6ad5c33649001d7e409ef6da5b81f6e9b39af3fa475da47da717",
+    "bytes": 80057
+  },
+  "source_manifest.json": {
+    "sha256": "3846f4851fa3d923d1703a2f99f401829945da12f13ab9124a91b8ffa2e9e64b",
+    "bytes": 347
+  },
+  "ThresholdPolicy.csv": {
+    "sha256": "0e690927451b2793f152bfec44db6cea34d09cf9b30c36e57ee9f4ec98bda0f6",
+    "bytes": 306
+  },
+  "validation_summary.json": {
+    "sha256": "10fc42f2b11e59f9c9d3580406257e886d9d8c13650fe064980ce114a7ade005",
+    "bytes": 1123
+  }
+}

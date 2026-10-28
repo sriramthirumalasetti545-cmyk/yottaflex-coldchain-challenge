@@ -1,0 +1,34 @@
+{
+  "scale": "full",
+  "seed": 20261022,
+  "counts": {
+    "Product": 3,
+    "Shipment": 1000,
+    "Container": 300,
+    "Sensor": 600,
+    "SensorReading": 1992652,
+    "RouteStop": 5000,
+    "ThresholdPolicy": 3,
+    "Excursion": 146,
+    "CustodyEvent": 3146,
+    "CorrectiveAction": 146
+  },
+  "ground_truth_rows": 176,
+  "validation_status": "PASS_WITH_LABELLED_ANOMALIES",
+  "validation_issues": [],
+  "checks": [
+    "primary-key uniqueness",
+    "foreign-key integrity",
+    "required-field validation",
+    "valid enum values",
+    "date and lifecycle chronology",
+    "sensor physical-range validation",
+    "missing sensor interval validation",
+    "product-specific threshold policy validation",
+    "excursion duration calculation",
+    "custody timeline ordering",
+    "corrective action linkage",
+    "ground-truth anomaly coverage"
+  ],
+  "note": "Known negative scenarios are intentionally preserved and recorded in ground_truth.csv. The checks list describes intended validation coverage; verify that each check is implemented and tested before treating it as complete."
+}

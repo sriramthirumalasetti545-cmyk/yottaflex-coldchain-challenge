@@ -1,0 +1,124 @@
+{
+  "Product": {
+    "pk": "product_id",
+    "fields": {
+      "product_id": "string|required|unique|immutable",
+      "name": "string|required",
+      "category": "enum|required|pharma,food,biologic",
+      "temp_min_c": "float|required|Celsius",
+      "temp_max_c": "float|required|Celsius",
+      "humidity_min_pct": "float|required|percent",
+      "humidity_max_pct": "float|required|percent",
+      "max_excursion_minutes": "integer|required|>=0"
+    }
+  },
+  "Shipment": {
+    "pk": "shipment_id",
+    "fields": {
+      "shipment_id": "string|required|unique|SHP-YYYY-000001",
+      "product_id": "string|required|FK Product",
+      "departure_at": "datetime|required|UTC ISO-8601",
+      "delivered_at": "datetime|required|UTC ISO-8601; >= departure",
+      "status": "enum|required|planned,in_transit,delivered,exception"
+    }
+  },
+  "Container": {
+    "pk": "container_id",
+    "fields": {
+      "container_id": "string|required|unique|CNT-000001",
+      "container_type": "enum|required|refrigerated,insulated",
+      "status": "enum|required|available,in_use,maintenance"
+    }
+  },
+  "Sensor": {
+    "pk": "sensor_id",
+    "fields": {
+      "sensor_id": "string|required|unique",
+      "container_id": "string|required|FK Container",
+      "sensor_type": "enum|required|temperature,humidity",
+      "calibrated": "boolean|required",
+      "calibrated_at": "datetime|required|UTC ISO-8601",
+      "valid_until": "datetime|required|UTC ISO-8601; >= calibrated_at"
+    }
+  },
+  "SensorReading": {
+    "pk": "reading_id",
+    "fields": {
+      "reading_id": "string|required|unique|RDG-<sensor-id>-<timestamp>",
+      "sensor_id": "string|required|FK Sensor",
+      "shipment_id": "string|required|FK Shipment",
+      "route_stop_id": "string|required|FK RouteStop",
+      "recorded_at": "datetime|required|UTC ISO-8601",
+      "value": "float|required|unit depends on sensor_type",
+      "unit": "enum|required|Celsius,percent",
+      "quality_status": "enum|required|valid,dropout,physical_range",
+      "issue_type": "optional enum|missing_interval,physical_range,calibration_failure,wrong_product_threshold,undercounted_duration"
+    }
+  },
+  "RouteStop": {
+    "pk": "route_stop_id",
+    "fields": {
+      "route_stop_id": "string|required|unique",
+      "shipment_id": "string|required|FK Shipment",
+      "sequence_no": "integer|required|unique per shipment|>=1",
+      "location": "string|required",
+      "planned_at": "datetime|required",
+      "actual_at": "datetime|required|UTC ISO-8601"
+    }
+  },
+  "ThresholdPolicy": {
+    "pk": "policy_id",
+    "fields": {
+      "policy_id": "string|required|unique",
+      "product_id": "string|required|FK Product",
+      "effective_from": "datetime|required",
+      "effective_to": "optional datetime",
+      "temp_min_c": "float|required|Celsius",
+      "temp_max_c": "float|required|Celsius",
+      "humidity_min_pct": "float|required|percent",
+      "humidity_max_pct": "float|required|percent",
+      "max_excursion_minutes": "integer|required|>=0"
+    }
+  },
+  "Excursion": {
+    "pk": "excursion_id",
+    "fields": {
+      "excursion_id": "string|required|unique|EXC-2026-000001",
+      "shipment_id": "string|required|FK Shipment",
+      "sensor_id": "string|required|FK Sensor",
+      "started_at": "datetime|required",
+      "ended_at": "datetime|required",
+      "duration_minutes": "integer|required|derived",
+      "metric": "enum|required|temperature,humidity",
+      "observed_max": "float|required",
+      "decision": "enum|required|brief,prolonged,invalid_sensor_data",
+      "policy_id": "string|required|FK ThresholdPolicy",
+      "ground_truth_label": "optional string|separate truth labels are in ground_truth.csv"
+    }
+  },
+  "CustodyEvent": {
+    "pk": "custody_event_id",
+    "fields": {
+      "custody_event_id": "string|required|unique",
+      "shipment_id": "string|required|FK Shipment",
+      "event_at": "datetime|required",
+      "actor": "string|required",
+      "event_type": "enum|required|handoff,departed,arrived,inspection,notification_sent",
+      "location": "string|required",
+      "notes": "string|required"
+    }
+  },
+  "CorrectiveAction": {
+    "pk": "action_id",
+    "fields": {
+      "action_id": "string|required|unique",
+      "excursion_id": "string|required|FK Excursion",
+      "owner_role": "enum|required|quality_engineer,maintenance_engineer,plant_operator,ot_it_admin",
+      "action_type": "enum|required|inspect,quarantine, recalibrate,notify,review_route",
+      "status": "enum|required|open,in_progress,closed",
+      "created_at": "datetime|required",
+      "closed_at": "optional datetime",
+      "evidence_ref": "string|required"
+    }
+  }
+}

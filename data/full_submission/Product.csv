@@ -1,0 +1,4 @@
+product_id,name,category,temp_min_c,temp_max_c,humidity_min_pct,humidity_max_pct,max_excursion_minutes
+PRD-000001,Chilled Vaccine A,biologic,2,8,20,80,15
+PRD-000002,Fresh Produce B,food,1,6,55,95,30
+PRD-000003,Reagent C,pharma,2,10,15,75,20

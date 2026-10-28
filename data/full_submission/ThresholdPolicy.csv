@@ -1,0 +1,4 @@
+policy_id,product_id,effective_from,effective_to,temp_min_c,temp_max_c,humidity_min_pct,humidity_max_pct,max_excursion_minutes
+POL-0001-V1,PRD-000001,2025-01-01T08:00:00Z,,2,8,20,80,15
+POL-0002-V1,PRD-000002,2025-01-01T08:00:00Z,,1,6,55,95,30
+POL-0003-V1,PRD-000003,2025-01-01T08:00:00Z,,2,10,15,75,20

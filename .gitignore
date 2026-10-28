@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.env
+*.sqlite
+*.db
+
+data/*
+!data/full_submission/
+data/full_submission/*
+!data/full_submission/*.csv
+!data/full_submission/*.json
+src/generate_data_backup.py
+src/generate_data_before_sql_changes.py
+data/full_submission/SensorReading.csv

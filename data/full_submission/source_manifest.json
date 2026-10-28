@@ -1,0 +1,9 @@
+{
+  "source_type": "synthetic_generated_data",
+  "external_data_used": false,
+  "generator": "src/generate_data.py",
+  "seed": 20261022,
+  "scale": "full",
+  "generated_at": "fixed-by-design-not-recorded",
+  "notes": "All records are synthetic. ground_truth.csv is an evaluation-only label file and must not be used as an input feature."
+}
