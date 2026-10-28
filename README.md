@@ -53,7 +53,7 @@ Compare CSV row counts and SHA-256 hashes. Note: checksums for `coldchain.sqlite
 - Ground truth is evaluation-only; do not merge it into model input features.
 
 ## Outputs
-`Product.csv`, `Shipment.csv`, `Container.csv`, `Sensor.csv`, `SensorReading.csv`, `RouteStop.csv`, `ThresholdPolicy.csv`, `Excursion.csv`, `CustodyEvent.csv`, `CorrectiveAction.csv`, `ground_truth.csv`, `data_dictionary.json`, `source_manifest.json`, `validation_summary.json`, `checksums.json`, and `coldchain.sqlite`.
+`Product.csv`, `Shipment.csv`, `Container.csv`, `Sensor.csv`, `SensorReading.csv.gz`, `RouteStop.csv`, `ThresholdPolicy.csv`, `Excursion.csv`, `CustodyEvent.csv`, `CorrectiveAction.csv`, `ground_truth.csv`, `data_dictionary.json`, `source_manifest.json`, `validation_summary.json`, and `checksums.json`.
 
 ## Known limitations / next improvements
 This is a deterministic synthetic-data generator and rule-based evidence workflow, not a live IoT service. Excursion records are derived from injected excursion windows rather than a production-grade streaming detector. The generator includes primary-key uniqueness, required-field, enum, selected foreign-key, chronology, physical-range and custody-ordering checks. Missing-interval, wrong-product-threshold and undercounted-duration scenarios are generated as labelled anomalies; verify that each scenario is detected correctly before relying on it for evaluation. Additional improvements include exhaustive interval-gap validation, policy-effective-date checks, lifecycle validation, explicit shipment-container assignment history and persisted append-only state-transition events.
